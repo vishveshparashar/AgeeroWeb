@@ -1,0 +1,67 @@
+---
+layout: default
+title: Necklace
+---
+
+
+<!-- Slider Area -->
+<section class="hero-slider">
+    <!-- Single Slider -->
+    <div class="single-slider">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-9 offset-lg-3 col-12">
+                    <div class="text-inner">
+                        <div class="row">
+                            <div class="col-lg-7 col-12">
+                                <div class="hero-text">
+
+                                    <p>Maboriosam in a nesciung eget magnae <br> dapibus disting tloctio in the find it
+                                        pereri <br> odiy maboriosm.</p>
+                                    <div class="button">
+                                        <img src="images/img 57.png" alt="#">
+                                        <a href="#" class="btn">Shop Now!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ End Single Slider -->
+</section>
+<!--/ End Slider Area -->
+
+<!-- Start Midium Banner  -->
+<section class="midium-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title">
+                    <h2>Our Products</h2>
+                </div>
+            </div>
+
+            <!-- Single Banner  -->
+            {% assign item = site.categories['necklace'] %}
+            {% for post in item %}
+
+            <!-- Single Banner  -->
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="single-banner">
+                    <img src="/images/product/{{post.categories}}/{{post.image1}}" alt="#">
+                    <div class="content">
+                        <h3>{{post.name}}</h3>
+                        <a href="{{ post.url | absolute_url }}">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /End Single Banner  -->
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+<!-- End Midium Banner --
