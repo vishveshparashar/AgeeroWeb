@@ -12,15 +12,9 @@ layout: default
 				<div class="col-lg-9 offset-lg-3 col-12">
 					<div class="text-inner">
 						<div class="row">
-							<div class="col-lg-7 col-12">
+							<div class="col-lg-12 col-12 text-center">
 								<div class="hero-text">
-
-									<p>Maboriosam in a nesciung eget magnae <br> dapibus disting tloctio in the find it
-										pereri <br> odiy maboriosm.</p>
-									<div class="button">
-										<img src="images/img 57.png" alt="#">
-										<a href="#" class="btn">Shop Now!</a>
-									</div>
+									<h2 style="color: white;">Ageero India</h2>
 								</div>
 							</div>
 						</div>
@@ -36,20 +30,23 @@ layout: default
 <!-- Start Small Banner  -->
 <section class="small-banner section">
 	<div class="container-fluid">
+		<div class="section-title">
+			<h2>Latest Items</h2>
+		</div>
+
 		<div class="row">
-			<!-- -------------------------------------------------------------- -->
 
 			{% assign count = 1 %}
 			<!-- Single Banner  -->
-			{% assign item = site.categories['necklace'] %}
+			{% assign item = site.categories['featured'] %}
 			{% for post in item %}
-			{% if count == 2 %}
+			{% if count == 7 %}
 			{% break %}
 			{% endif %}
 			<div class="col-lg-4 col-md-6 col-12">
-				<div class="single-banner">
+				<div class="single-banner" style="margin:2%">
 					<img src="/images/product/{{post.categories}}/{{post.image1}}" alt="#">
-					<div class="content">
+					<div class="content" style="color: white;">
 
 						<p>{{post.categories}}</p>
 						<h3>{{post.name}}</h3>
@@ -60,37 +57,6 @@ layout: default
 			{% assign count = count | plus: 1 %}
 			{% endfor %}
 
-			<!-- ------------------------------------------------------ -->
-
-			<!-- /End Single Banner  -->
-			<!-- Single Banner  -->
-			<!-- <div class="col-lg-4 col-md-6 col-12">
-				<div class="single-banner">
-					<img src="images/img 56.png" alt="#">
-					<div class="content">
-						<p>section 2 category</p>
-						<h3>Awesome Bag <br> 2020</h3>
-						<a href="#">Shop Now</a>
-					</div>
-				</div>
-			</div> -->
-
-
-			<!-- /End Single Banner  -->
-			<!-- Single Banner  -->
-			<!-- <div class="col-lg-4 col-12">
-				<div class="single-banner tab-height">
-					<img src="images/img 56.png" alt="#">
-					<div class="content">
-						<p>
-						<p>section 3 category</p>
-						</p>
-						<h3>Mid Season <br> Up to <span>40%</span> Off</h3>
-						<a href="#">Discover Now</a>
-					</div>
-				</div>
-			</div> -->
-			<!-- /End Single Banner  -->
 		</div>
 	</div>
 </section>
@@ -120,32 +86,29 @@ layout: default
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
 							<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#necklace"
 									role="tab">Necklace</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#women"
-									role="tab">Woman</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#kids" role="tab">Kids</a>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#ring" role="tab">Ring</a>
 							</li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#accessories"
-									role="tab">Accessories</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#essential"
-									role="tab">Essential</a></li>
-							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#prices"
-									role="tab">Prices</a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#stone"
+									role="tab">Stone</a>
+							</li>
 						</ul>
 						<!--/ End Tab Nav -->
 					</div>
 
 					<div class="tab-content" id="myTabContent">
-						{% assign count = 1 %}
-						<!-- Start Single Tab -->
-						{% if count == 16 %}
-						{% break %}
-						{% endif %}
-						{% assign item = site.categories['necklace'] %}
-						{% for post in item %}
+
 
 						<div class="tab-pane fade  show active" id="{{post.categories}}" role="tabpanel">
 							<div class="tab-single">
 								<div class="row">
+
+									{% assign count = 1 %}
+									<!-- Start Single Tab -->
+									{% if count == 16 %}
+									{% break %}
+									{% endif %}
+									{% assign item = site.categories['necklace'] %}
+									{% for post in item %}
 
 									<div class="col-xl-3 col-lg-4 col-md-4 col-12">
 										<div class="single-product">
@@ -159,18 +122,8 @@ layout: default
 														alt="#">
 												</a>
 												<div class="button-head">
-													<div class="product-action">
-														<a data-toggle="modal" data-target="#exampleModal"
-															title="Quick View" href="#"><i
-																class=" ti-eye"></i><span>Quick Shop</span></a>
-														<a title="Wishlist" href="#"><i class=" ti-heart "></i><span>Add
-																to Wishlist</span></a>
-														<a title="Compare" href="#"><i
-																class="ti-bar-chart-alt"></i><span>Add to
-																Compare</span></a>
-													</div>
 													<div class="product-action-2">
-														<a title="Add to cart" href="#">Add to cart</a>
+														<a title="Add to cart" href="tel://9413504456">Buy Now</a>
 													</div>
 												</div>
 											</div>
@@ -183,13 +136,15 @@ layout: default
 										</div>
 									</div>
 
+									<!--/ End Single Tab -->
+									{% endfor %}
+									{% assign count = count | plus: 1 %}
 
 								</div>
 							</div>
 						</div>
-						<!--/ End Single Tab -->
-						{% endfor %}
-						{% assign count = count | plus: 1 %}
+
+
 
 					</div>
 				</div>
@@ -207,9 +162,11 @@ layout: default
 			<!-- Single Banner  -->
 			{% assign item = site.categories['featured'] %}
 			{% for post in item %}
-			{% if count == 4 %}
+			{% if count == 16 %}
 			{% break %}
 			{% endif %}
+
+			{% if count > 7 %}
 			<!-- Single Banner  -->
 			<div class="col-lg-6 col-md-6 col-12">
 				<div class="single-banner">
@@ -221,23 +178,12 @@ layout: default
 					</div>
 				</div>
 			</div>
+			{% endif %}
+
 			<!-- /End Single Banner  -->
 			{% assign count = count | plus: 1 %}
 			{% endfor %}
 
-
-			<!-- Single Banner  -->
-			<div class="col-lg-6 col-md-6 col-12">
-				<div class="single-banner">
-					<img src="images/img 55.png" alt="#">
-					<div class="content">
-						<p>shoes women</p>
-						<h3>mid season <br> up to <span>70%</span></h3>
-						<a href="#" class="btn">Shop Now</a>
-					</div>
-				</div>
-			</div>
-			<!-- /End Single Banner  -->
 		</div>
 	</div>
 </section>
@@ -274,57 +220,6 @@ layout: default
 </section>
 <!-- /End Cowndown Area -->
 
-<!-- Start Shop Blog  -->
-<section class="shop-blog section">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="section-title">
-					<h2>From Our Blog</h2>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-4 col-md-6 col-12">
-				<!-- Start Single Blog  -->
-				<div class="shop-single-blog">
-					<img src="images/img 000.png" alt="#">
-					<div class="content">
-						<p class="date">22 July , 2020. Monday</p>
-						<a href="#" class="title">Sed adipiscing ornare.</a>
-						<a href="#" class="more-btn">Continue Reading</a>
-					</div>
-				</div>
-				<!-- End Single Blog  -->
-			</div>
-			<div class="col-lg-4 col-md-6 col-12">
-				<!-- Start Single Blog  -->
-				<div class="shop-single-blog">
-					<img src="images/img 111.png" alt="#">
-					<div class="content">
-						<p class="date">22 July, 2020. Monday</p>
-						<a href="#" class="title">Man’s Fashion Winter Sale</a>
-						<a href="#" class="more-btn">Continue Reading</a>
-					</div>
-				</div>
-				<!-- End Single Blog  -->
-			</div>
-			<div class="col-lg-4 col-md-6 col-12">
-				<!-- Start Single Blog  -->
-				<div class="shop-single-blog">
-					<img src="images/img 011.png" alt="#">
-					<div class="content">
-						<p class="date">22 July, 2020. Monday</p>
-						<a href="#" class="title">Women Fashion Festive</a>
-						<a href="#" class="more-btn">Continue Reading</a>
-					</div>
-				</div>
-				<!-- End Single Blog  -->
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End Shop Blog  -->
 
 <!-- Start Shop Services Area -->
 <section class="shop-services section home">

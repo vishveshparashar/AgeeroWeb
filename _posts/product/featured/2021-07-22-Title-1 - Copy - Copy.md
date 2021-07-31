@@ -1,0 +1,12 @@
+---
+layout: post
+categories: featured
+name: NameOfTheNecklace
+price: 100
+whitelist: 902342
+image1: 1.webp
+image2:
+image3:
+---
+
+THis is a small text about image

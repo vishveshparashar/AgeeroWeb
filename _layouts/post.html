@@ -1,0 +1,44 @@
+---
+title: {{page.title}}
+layout: default
+---
+
+<!-- Start Shop Newsletter  -->
+<section class="shop-newsletter section">
+	<div class="container">
+		<div class="inner-top">
+			<div class="row justify-content-center">
+				<div class="col-lg-12 col-12">
+					<!-- Start Newsletter Inner -->
+					<div class="inner">
+						<h3>{{page.title}}</h3>
+                        <h4>
+                            Price: {{page.price}}<br><br>
+                            <a href="tel://9413504456">Buy Now !</a>
+                        </h4>
+                        
+					</div>
+					<!-- End Newsletter Inner -->
+				</div>
+                <div class="col-lg-6">
+                    <img src="/images/product/{{page.categories}}/{{page.image1}}" style="width: 80%;margin:10%">
+                </div>
+            
+                {% if page.image2 != NULL %}
+                <div class="col-lg-6">
+                    <img src="/images/product/{{page.categories}}/{{page.image2}}" style="width: 80%;margin:10%">
+                </div>
+                {% endif %}
+
+                {% if page.image3 != NULL %}
+                <div class="col-lg-6">
+                    <img src="/images/product/{{page.categories}}/{{page.image3}}" style="width: 80%;margin:10%">
+                </div>
+                {% endif %}
+
+
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Shop Newsletter -->
